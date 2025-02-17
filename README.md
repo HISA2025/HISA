@@ -7,9 +7,9 @@
 **This is our Torch implementation for the paper:**
 
 ## Environment Requirements
-- Python >= 3.6
-- numpy
-- PyTorch >= 1.0
+* Python >= 3.6
+* Numpy >= 1.12
+* PyTorch >= 1.0
 
 (Note: If you are using additional libraries or specific versions, please specify them here.)
 
