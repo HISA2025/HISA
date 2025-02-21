@@ -53,14 +53,6 @@ dataloader = DataLoader(dataset, batch_size = 1, shuffle=False,drop_last=True)
 dataloader_test = DataLoader(dataset_test, batch_size = 1, shuffle=False,drop_last=True)
 
 # setup trainer
-seed = 2024
-torch.manual_seed(seed)
-torch.cuda.manual_seed(seed)
-torch.backends.cudnn.deterministic = True
-torch.backends.cudnn.benchmark = False
-np.random.seed(seed)
-import random
-random.seed(seed)
 trainer = FlashbackPlusPlusTrainer(setting.lambda_t, setting.lambda_s,setting.alpha_start, setting.alpha_end, setting.epochs,setting.decay_type,setting.weight_type)
 
 trainer.prepare(poi_loader.locations(), poi_loader.individual_locations(),poi_loader.category(),poi_loader.location_type(),poi_loader.user_count(), setting.hidden_dim, setting.rnn_factory, setting.device,setting)
